@@ -8,7 +8,7 @@ public class Factory {
 			return new MergeSort();
 		else if(typeSort.equals("quick"))
 			return new QuickSort();
-		
-		return null;
+		else
+			return null;
 	}
 }
