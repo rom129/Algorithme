@@ -13,11 +13,11 @@ public class Main {
 			} 
 		
 			long startTime = System.currentTimeMillis();
-			QuickSort qSort = new QuickSort();
+			InterfaceSort iSort = new Factory().getSort("quick");
 			//SelectionSort sSort = new SelectionSort();
 			//BubbleSort bSort = new BubbleSort();
 			//MergeSort mSort = new MergeSort();
-			qSort.sort(list);
+			iSort.sort(list);
 		
 			long endTime = System.currentTimeMillis();
 			long difference = endTime - startTime;
