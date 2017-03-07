@@ -1,5 +1,5 @@
 
-public class QuickSort {
+public class QuickSort implements InterfaceSort {
 	
 	public static int partition(int[] data, int begin, int end, int pivotIdx){ 
 		 Main.swap(data, pivotIdx, --end);
@@ -18,11 +18,11 @@ public class QuickSort {
 		 return begin; 
 	}
 	
-	public static void sort(int[] data){ 
+	public void sort(int[] data){ 
 		sort(data, 0, data.length); 
 	} 
 
-	public static void sort(int[] data, int begin, int end){ 
+	public void sort(int[] data, int begin, int end){ 
 		if((end-begin) < 2){ return; } 
 		int m= partition(data, begin, end, (end+begin)/2);
 		sort(data, begin, m); 
